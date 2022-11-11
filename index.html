@@ -1,55 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Starter</title>
-  <link rel="stylesheet" href="css/modnorm.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/nocom.css"> -->
-</head>
-<body>
-  <header class="top-nav">
-    <a href="#" class="nav-link logo">Site&nbsp;Title</a>
-    <nav id="site-nav" class="nav-wrap">
-      <a href="#" class="nav-link">News</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Specials</a>
-      <a href="#" class="nav-link">Contact</a>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Gallery</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font awesome CDN -->
+    <link rel="stylesheet" href="css/sanitize.css"><!-- cross-browser compatibility -->
+    <link rel="stylesheet" href="css/style.css"><!-- our stylesheet is loaded LAST, to override others -->
+  </head>
+
+
+
+  <body>
+    <!--<nav id="main-nav" class="topnav">
+      <a class="nav-item logo">
+        <span class="label"><i class="fas fa-home"></i>Home</span>
+      </a>
+      <a class="nav-item">
+        <span class="label"><i class="fas fa-file-upload"></i>Upload</span>
+      </a>
+      <a class="nav-item">
+        <span class="label"><i class="fas fa-info-circle"></i>Info</span>
+      </a>
+      <a class="nav-item">
+        <span class="label"><i class="fas fa-quote-left"></i>Credits</span>
+      </a>
+      <a class="nav-item more">
+        <span class="label"><i class="fas fa-ellipsis-h"></i>More</span>
+      </a>
+      <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
     </nav>
-    <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
-  </header>
-  <main>
+  -->
+<nav>
+  <div class="wrap_nav1">
+    <span class="decor"></span>
+    <nav class="nav_nav1">
+      <ul class="primary ul_nav1">
+        <li class="li_nav1">
+          <a class="a_nav1" href="">TOPIC1</a>
+          <ul class="sub ul_nav1">
+            <li class="li_nav1"><a class="a_nav1" href="">SUB1</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB2</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB3</a></li>
+          </ul>
+        </li>
+        <li class="li_nav1"> 
+          <a class="a_nav1" href="">TOPIC2</a>
+          <ul class="sub ul_nav1">
+            <li class="li_nav1"><a class="a_nav1" href="">SUB1</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB2</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB3</a></li>
+          </ul>
+        </li>
+        <li class="li_nav1">
+          <a class="a_nav1" href="">TOPIC3</a>
+          <ul class="sub ul_nav1">
+            <li class="li_nav1"><a class="a_nav1" href="">SUB1</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB2</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB3</a></li>
+          </ul>  
+        </li>
+        <li class="li_nav1">
+          <a class="a_nav1" href="">TOPIC 4</a>
+          <ul class="sub ul_nav1">
+            <li class="li_nav1"><a class="a_nav1" href="">SUB1</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB2</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">SUB3</a></li>
+          </ul>  
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+
+
+
+<div class="bodyContent">
     <section class="slideshow">
-      <!--slider goes here-->
-      <h2>slideshow here</h2>
-      <div class="controls">
-        <button>&#8249;</button>
-        <button>&#8250;</button>
+      <div class="slideshow-wrapper">
+        <div class="slide fade">
+          <div class="numberof">1 of 4</div>
+          <img src="https://picsum.photos/1280/448/?image=12"/>
+          <div class="captiontext">A beautiful view of it.</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">2 of 4</div>
+          <img src="https://picsum.photos/1280/448/?image=13"/>
+          <div class="captiontext">The whole thing in all its glory.</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">3 of 4</div>
+          <img src="https://picsum.photos/1280/448/?image=15"/>
+          <div class="captiontext">Out at the edges of it.</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">4 of 4</div>
+          <img src="https://picsum.photos/1280/448/?image=16"/>
+          <div class="captiontext">Deep inside the heart of it.</div>
+        </div><!-- end .slide.fade -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;<!--unicode for less-than-sign--></a>
+        <a class="next" onclick="plusSlides(1)">&#10095;<!--unicode for greater-than-sign--></a>
+      </div><!--end slideshow-wrapper-->
+      <br />
+      <div class="text-center">
+        <span class="indicator" onclick="currentSlide(1)"><img src="https://picsum.photos/1280/448/?image=12"/></span>
+        <span class="indicator" onclick="currentSlide(2)"><img src="https://picsum.photos/1280/448/?image=13"/></span>
+        <span class="indicator" onclick="currentSlide(3)"><img src="https://picsum.photos/1280/448/?image=15"/></span>
+        <span class="indicator" onclick="currentSlide(4)"><img src="https://picsum.photos/1280/448/?image=16"/></span>
       </div>
     </section>
-    <section class="hero">
-      <h2>Images from <em>Lorem Picsum</em></h2>
-      <p>Visit <a href="https://picsum.photos/">that site</a> to learn how to use them.</p>
-    </section>
-    <section class="grid-cont">
-      <article class="card">
-        <!-- <img src="https://picsum.photos/480/320?grayscale&random=1" alt="alt-text reads . . ."> -->
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      
-      <!--
-        add more article.cards inside this section
-      -->
 
-    </section>
-  </main>
-  <footer>
-    <p>&copy;2022 Your Name</p>
-  </footer>
-  <script src="js/page.js"></script>
-</body>
+
+<!--
+  <div class="main-grid-item one">
+        <div class="thumb"><img class="gallery" src="./img/plant1.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Tea + Devices = Fun</h4>
+          <p class="card-text">I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly or put out a battery fire.</p>
+          <button data-modal="#09" class="card-more button">View</button>
+        </div>
+      </div>
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="./img/plant1.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Tea + Devices = Fun</h3>
+  						<p>I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div></div></div></div>
+-->
+
+    <ul class="cards">
+      <li>
+        <!-- NORMAL VERSION OF CARD-->
+        <a href="" class="card">
+          <img src="./img/plant1.jpg" class="card__image"/>
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc"><path/></svg>                     
+              <div class="card__header-text">
+                <h3 class="card__title">PLANT 1</h3>
+                <button type="button" data-modal="#09" class="card-more button">View</button><!--<span class="card__status">Learn more</span>-->
+              </div>
+            </div>
+            <p class="card__description">What a super cute and aesthetic plant, it could be yours now for ...</p>
+          </div>
+        </a>
+        <!-- MODAL VERSION OF CARD-->
+        <div id="09" class="modal">
+          <div class="modal-content">
+            <span class="closes">&times;</span>
+            <div class="modal-body">
+              <img src="./img/plant1.jpg" alt="example" />
+              <div class="eg-text">
+                <h3>PLANT 1</h3>
+                <p>What a super cute and aesthetic plant, it could be yours now for ... Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              </div>
+            </div><!--end .modal-body-->
+          </div><!--end .modal-content-->
+        </div><!--end .modal-->
+      </li>
+
+
+
+
+      
+      <li>
+        <a href="" class="card">
+          <img src="./img/plant2.jpg" class="card__image"/>
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc"><path/></svg>                     
+              <div class="card__header-text">
+                <h3 class="card__title">Bird</h3>
+                <span class="card__status">Learn more</span>
+              </div>
+            </div>
+            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img src="./img/plant3.jpg" class="card__image"/>
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc"><path/></svg>                     
+              <div class="card__header-text">
+                <h3 class="card__title">Bird</h3>
+                <span class="card__status">Learn more</span>
+              </div>
+            </div>
+            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img src="./img/plant4.jpg" class="card__image"/>
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc"><path/></svg>                     
+              <div class="card__header-text">
+                <h3 class="card__title">Bird</h3>
+                <span class="card__status">Learn more</span>
+              </div>
+            </div>
+            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+
+    <main class="main-grid">
+      <!------------CARD ONE------------->
+      <div class="main-grid-item one">
+        <div class="thumb"><img class="gallery" src="./img/plant1.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Tea + Devices = Fun</h4>
+          <p class="card-text">I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly or put out a battery fire.</p>
+          <button data-modal="#09" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="./img/plant1.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Tea + Devices = Fun</h3>
+  						<p>I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+
+      <!------------CARD TWO--------------->
+      <div class="main-grid-item two">
+        <div class="thumb"><img class="gallery" src="./img/plant2.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Out of Focus Book</h4>
+          <p class="card-text">Books are always best when slightly out of focus and blurred, so you don't have to actually read any of the words inside.</p>
+          <button data-modal="#24" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="24" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="./img/plant2.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Out of Focus Book</h3>
+  						<p>Books are always best when slightly out of focus and blurred, so you don't have to actually read them . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!---------- CARD THREE ----------->
+      <div class="main-grid-item three">
+        <div class="thumb"><img class="gallery" src="./img/plant3.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Don't Eat Cacti Fruit</h4>
+          <p class="card-text">The fruits of many common cacti are covered in spines, so don't try to eat them unless you're really, really thirsty. </p>
+          <button data-modal="#35" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="35" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="img/plant3.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Don't Eat Cacti Fruit</h3>
+  						<p>The fruits of many common cacti are covered in spines, so don't try to eat them . . .  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!------------CARD FOUR--------------->
+      <div class="main-grid-item four">
+        <div class="thumb"><img class="gallery" src="./img/plant4.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Could Be Anywhere</h4>
+          <p class="card-text">This stormy gray coastline could be just about anywhere: Atlantic, Pacific, a Great Lake, who knows?</p>
+          <button data-modal="#44" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="44" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="img/plant4.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Could Be Anywhere</h3>
+  						<p>This stormy gray coastline could be just about anywhere: Atlantic, Pacific, a Great Lake . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!------------CARD FIVE--------------->
+      <div class="main-grid-item five">
+        <div class="thumb"><img class="gallery" src="./img/plant5.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Not Really this Blue</h4>
+          <p class="card-text">No sky was ever this blue, but the filter makes it seem like you are regarding an alien vista, or have eye problems.</p>
+          <button data-modal="#54" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="54" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="img/plant5.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Not Really this Blue</h3>
+  						<p>No sky was ever this blue, but the filter makes it seem like you are regarding an alien vista . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!------------CARD SIX--------------->
+      <div class="main-grid-item six">
+        <div class="thumb"><img class="gallery" src="./img/plant6.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Really Old Fence Photo</h4>
+          <p class="card-text">This photo of the fence is really old. The fence itself isn't old, it's new, but the photo is really, really old.</p>
+          <button data-modal="#59" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="59" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="/img/plant6.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Really Old Fence Photo</h3>
+  						<p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!------------CARD SEVEN--------------->
+      <div class="main-grid-item seven">
+        <div class="thumb"><img class="gallery" src="./img/plant7.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">Lawnmowing Needed</h4>
+          <p class="card-text">Regular lawnmowing needed to keep our swing clear of grass. Would be open to using goats, if it would help.</p>
+          <button data-modal="#71" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="71" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="img/plant7.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Lawnmowing Needed</h3>
+  						<p>Regular lawnmowing needed to keep our swing clear of the grass. Would be interested in contracting goats . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+      <!------------CARD EIGHT--------------->
+      <div class="main-grid-item eight">
+        <div class="thumb"><img class="gallery" src="./img/plant8.jpg"/></div><hr/>
+        <div class="card-content">
+          <h4 class="card-title">This Sad Bench</h4>
+          <p class="card-text">There's always an open seat on this classic bench that also serves as a roost for many, many local pigeons.</p>
+          <button data-modal="#32" class="card-more button">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="32" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="./img/plant8.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>This Sad Bench</h3>
+  						<p>There's always an open seat on this classic bench that also serves as a roost for local pigeons. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+
+
+    </main>
+  </div> <!-- closes div on bodyContent for 90% width-->
+    <footer>
+      <p>&copy; 2022 Holly Rossmann&nbsp;|&nbsp; All photos from <a href="https://unsplash.com/">unsplash.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script src="js/page.js" type="text/javascript"></script>
+  </body>
 </html>

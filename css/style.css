@@ -1,160 +1,568 @@
-:root {/*-- sets color variables --*/
-  --dark: #444;
-  --ltmid: #DDD;
-  --dkmid: #999;
-  --light: #F9F9F9;
-  --accent: #6495ed;
+:root {/*-- Sets color variables --*/
+  --prime: rgb(147, 180, 166);
+  --text: rgb(255, 255, 255);
+  --rev-text: #EEE;
+  --accent: #2E9CCA;
+  --bg: #EEE;
 }
-body {
-  color: var(--dark); /*-- sets body default font color --*/
-  line-height: 1.4; /*-- sets body default line height --*/
-}
-/*-- default styles for links (in the correct order) --*/
-a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
-a:visited {color:#305eb3;}
-a:hover {color: var(--accent);}
-a:active {color: var(--dkmid);}
 
-header.top-nav { /*-- main nav styles --*/
-  background-color: var(--ltmid); /*-- nav background --*/
-  padding: 1rem 2rem 1rem 0; /*-- inside padding --*/
-  display: flex; /*-- header bar is a flex container --*/
-  min-height: 8rem; /*-- header bar has a minimum height --*/
-  justify-content: space-between; /*-- main axis space distribution --*/
-  align-items: center; /*-- cross axis space distribution --*/
-  position: relative; /*-- needed to absolutly position some children --*/
+body{
+  margin: 0;
+  font-size: 18px;
+  color: var(--text);
+  background-color: var(--prime);
 }
-nav { /*-- targets the links wrapper --*/
-  flex-basis: 30%; /*-- gives this flex child an ideal width --*/
-  display: flex; /*-- makes the child also a flex container --*/
-  justify-content: space-between; /*-- main axis space distribution --*/
+.bodyContent { /*-- Sets body defaults --*/
+  
+  width: 98%;
+  margin: 0 auto;
+  /*overflow: hidden;*/
 }
-a.nav-link { /*-- targets individual links --*/
-  padding-left: 2.8rem; /*-- sets some minimum padding --*/
-  color: var(--dark); /*-- text color --*/
-  font-weight: 500; /*-- text weight --*/
-  text-decoration: none; /*-- removes underlines --*/
-  transition: all .2s ease-in-out; /*-- sets a transition for hover effects --*/
+i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
+  padding: 0 .33em;
 }
-a.nav-link:hover {
-  color: var(--accent);  /*-- color on hover --*/
+
+
+
+/*---------------------------------------- Styles for slideshow ------------------------------------------------------*/
+.slideshow {
+  background-color: var(--bg);
+  padding: 1em;
 }
-a.nav-link.logo {  /*-- just the site title --*/
-  text-transform: uppercase; /*-- makes all caps --*/
-  font-weight: 900; /*-- set to heaviest font --*/
+.slideshow-wrapper {
+  position: relative; /*-- this allows children to be position absolutely --*/
+  margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
 }
-a#trigram { /*-- hamburger menu icon --*/
-  display: none;  /*-- default display is none --*/
+.slideshow-wrapper img {
+  width: 100%; /*-- makes slideshow responsive in size --*/
 }
-a#trigram::before { /*-- uses ::before to change the menu icon --*/
-  content: '\2630'; /*-- sets it to show the hamburger icon --*/
-  font-size: 4rem; /*-- makes it very large --*/
-  position: relative; /*-- posititions it explicitly --*/
-  top: -.5rem; /*-- a little space from the top --*/
-  right: 0; /*-- flush right --*/
-}
-main {
-  padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
-}
-.slideshow { /*-- replace these styles with your slideshow styles --*/
-  display: flex; /*-- declares a flex container --*/
-  justify-content: center; /*-- center in the main axis --*/
-  align-items: center; /*-- center in the cross axis --*/
-  height: 55rem; /*-- fixed hieght, probably delete this --*/
-  border: 2px dashed var(--dkmid); /*-- unsubtle border --*/
-  border-radius: 8px; /*-- rounded corners --*/
-  background-color: var(--light); /*-- a bit of light background color --*/
-  color: var(--dkmid); /*-- text color is mid --*/
-  position: relative; /*-- allows explicit positioning for children --*/
-}
-.controls button { /*-- you'll probably replace all .controls styles with your own --*/
+.prev, .next {
   cursor: pointer; /*-- changes hover cursor to the hand --*/
   position: absolute; /*-- positions arrows absolutely--*/
+  top: 50%; /*-- positions arrows half the height of parent from top --*/
   width: auto; /*-- matches width of parent --*/
-  top: 40%; /*-- positions arrows from parent top --*/
-  color: var(--ltmid); /*-- arrow color --*/
-  background-color: transparent; /*-- hides button background --*/
-  border: none; /*-- removes default button border --*/
-  font-weight: 800; /*-- selects heavier font --*/
-  font-size: 8rem; /*-- sets arrow font size --*/
-  transition: 0.2s ease; /*-- sets transition speed for arrow hover--*/
+  padding: 16px; /*-- adds a little bit of space--*/
+  margin-top: -22px; /*-- adjusts position by height of arrows --*/
+  color: white; /*-- sets color for contrast --*/
+  font-weight: bold; /*-- selects heavier font --*/
+  font-size: 18px; /*-- sets arrow font size --*/
+  transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
+  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /*-- prevents users from selecting buttons --*/
 }
-.controls button:hover {
-  color: var(--accent); /*-- changes button color on hover --*/
+.next {
+  right: 0; /*-- positions next arrow hard right --*/
+  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
 }
-.controls button:nth-child(1) {
-  left: 1rem; /*-- positions first arrow to the left --*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
 }
-.controls button:nth-child(2) {
-  right: 1rem; /*-- positions second arrow to the right --*/
+.captiontext {
+  background: rgba(0,0,0,0.4); /*-- transparent black background --*/
+  color: #f2f2f2; /*-- sets color to almost white --*/
+  font-size: 22px; /*-- sets font size --*/
+  padding: 8px 12px; /*-- sets caption padding --*/
+  position: absolute; /*-- positions caption text absolutely--*/
+  bottom: 8px; /*-- sets position 8px from bottom --*/
+  width: 100%; /*-- sets width equal to container width --*/
+  text-align: center; /*-- aligns text center --*/
 }
-.slideshow h2 { /*-- styles the placeholder text (probably safe to delete) --*/
-  font-size: 4rem; /*-- font is larger than normal --*/
+.numberof {
+  color: #f2f2f2; /*-- sets color to almost white --*/
+  font-size: 12px; /*-- sets font size --*/
+  padding: 8px 12px; /*-- sets numberof padding --*/
+  position: absolute; /*-- positions numberof text absolutely--*/
+  top: 0; /*-- sets position hard to the top--*/
 }
-.hero {
-  padding: 4rem 0; /*-- top and bottom padding for the container --*/
-  display: flex; /*-- declares a flex container --*/
-  flex-direction: column; /*-- direction downward --*/
-  justify-content: center; /*-- vertical center --*/
-  align-items: center; /*-- horizontal center --*/
-  background-color: var(--ltmid); /*-- light color --*/
-  width: 100vw; /*-- extra wide --*/
-  margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
+.text-center {
+  display: flex;
 }
-.hero > * { /*-- targets all direct children of .hero --*/
-  margin: 0; /*-- zeroes their margins --*/
-  padding: 0; /*-- zeroes their padding --*/
+.indicator {
+  cursor:pointer; /*-- changes hover cursor to the hand --*/
+  height: auto; /*-- sets height of pics --*/
+  width: 25%; /*-- sets width of pics --*/
+  margin: 0 2px; /*-- adds margin between pics --*/
+  background-color: #bbb; /*-- sets background color to light gray --*/
+  display: inline-block; /*-- displays in a horizontal line --*/
+  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  opacity: .5;
 }
-.grid-cont { /*-- styles the main grid container for media cards --*/
-  padding: 2rem 0; /*-- top and bottom padding for the grid container --*/
-  display: grid; /*-- declares this a grid container --*/
-  grid-gap: 2rem; /*-- 2rem top, right, bottom, and left gaps between items --*/
-  grid-template-columns: 1fr; /*-- by default, there is 1 column that's 1fr wide --*/
+.indicator img {
+  width: 100% !important; /*-- small images fill available space --*/
 }
-@media screen and (min-width: 550px) { /*-- at slightly larger size, there are two equal columns --*/
-  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+.active, .indicator:hover {
+  opacity: 1; /*-- makes fully visible when hovered  --*/
 }
-@media screen and (min-width: 768px) { /*-- still two equal columns --*/
-  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade; /*-- webkit prefix  --*/
+  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
+  animation-name: fade; /*-- defines which animation to use --*/
+  animation-duration: 1.5s; /*-- sets the duration --*/
 }
-@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
-  .grid-cont {grid-template-columns: repeat(3, 1fr);}
+@-webkit-keyframes fade { /*-- webkit prefix --*/
+  from {opacity: .4}
+  to {opacity: 1}
 }
-@media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
-  .grid-cont {grid-template-columns: repeat(4, 1fr);}
+@keyframes fade { /*-- sets "fade" animation properties --*/
+  from {opacity: .4} /*-- sets start of animation --*/
+  to {opacity: 1} /*-- sets end of animation --*/
 }
-.card { /*-- selects .card elements --*/
-  padding: 2%; /*-- a little bit of flexible space inside the card --*/
-  display: flex; /*-- card is a flex container --*/
-  flex-direction: column; /*-- flow is downward --*/
-  border-radius: 8px; /*-- curved edges --*/
-  border: 2px dashed var(--dkmid); /*-- dashed border --*/
-  background-color: var(--light); /*-- a little bit of light color --*/
+/* On smaller screens, hides slideshow */
+@media only screen and (max-width: 767px) {
+  .slideshow {display: none;}
 }
-.card img { /*-- selects image children of .card --*/
-  width: 100%; /*-- full width of container --*/
-  height: auto; /*-- maintain aspect ratio --*/
-  max-height: 320px; /*-- can't be too tall --*/
-  border-radius: 8px 8px 0 0; /*-- curved corners, but just on the top --*/
+/*-- ----------
+- GRID STYLES -
+---------------*/
+.main-grid {
+  margin-top: 3.5rem; /*-- adds space above grid wrap --*/
+  display: grid; /*-- sets display mode --*/
+  grid-gap: 1.5rem; /*-- creates gutters --*/
+  grid-template-columns: 1fr; /*-- default mobile layout is 1-column--*/
 }
-.card button { /*-- selects button children of .card elements --*/
-  width: 30%; /*-- 1/3rd width of parent (the .card) --*/
-  min-width: 6rem; /*-- can't be too narrow --*/
-  margin: 2rem auto; /*-- centered it --*/
-  padding: 1rem 2rem; /*-- makes space inside the button --*/
-  cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+/*-- grid media queries--*/
+@media screen and (min-width: 550px) { /*-- at screens between 550 and 767 --*/
+  .bodyContent {width: 96%;}
+  .main-grid {grid-template-columns: repeat(2, 1fr);}  /*-- 2 columnns --*/
 }
-footer { /*-- just some footer styles, nothing weird --*/
-  margin-top: 2rem; /*-- adds space above --*/
-  background-color: var(--ltmid); /*-- light mid color --*/
-  padding: 1rem 2rem; /*-- inside space to match the nav --*/
-  display: flex; /*-- might as well --*/
-  height: 6rem; /*-- fixed height  --*/
-  justify-content: space-between; /*-- horizontal center --*/
-  align-items: center; /*-- vertical center --*/
+@media screen and (min-width: 768px) {/*-- at screens between 768 and 989 --*/
+  .bodyContent {width: 94%;}
+  .main-grid {grid-template-columns: repeat(3, 1fr);} /*-- 3 columnns --*/
 }
-footer p { /*-- targets the footer text --*/
-  width: 100%; /*-- p elements are full width of the container --*/
-  text-align: center; /*-- centers the text --*/
-  font-weight: 500; /*-- mid-weight font --*/
+@media screen and (min-width: 990px) {/*-- at screens between 990 and 1271 --*/
+  .bodyContent {width: 92%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+@media screen and (min-width: 1280px) {/*-- at screens 1280 and above --*/
+  .bodyContent {width: 90%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+/*-- media card styles -- */
+.main-grid-item {
+  border-radius: 4px;  /*-- rounds borders --*/
+  padding: .5em; /*-- adds space inside --*/
+  background-color: var(--bg);
+}
+.gallery{
+  background-size: cover; /*--sets image to cover background --*/
+  background-position: center center; /*-- positions image horiz. and vert. center --*/
+  border-radius: 4px 4px 0 0; 
+  width: 100%;
+}
+.thumb {
+   /*padding-bottom: 56%;-- creates ~16:9 ratio--*/
+  background-size: cover; /*--sets image to cover background --*/
+  background-position: center center; /*-- positions image horiz. and vert. center --*/
+  border-radius: 4px 4px 0 0; /*-- rounds top-left and top-right edges --*/
+}
+
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*-- vertically centers card content --*/
+}
+.card-title {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase; /*--all caps text --*/
+  align-self: flex-start; /*-- positions at beginning --*/
+  color: var(--text);
+}
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--text);
+}
+
+button.card-more {
+  background: transparent;
+  padding: .45em .7em .4em .7em;
+  border-radius: 200px;
+  font-size: .7em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button.card-more, button.card-more:visited {
+  color: var(--prime);
+  border: 1.5px solid var(--prime);
+  transition: all 250ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/*-- Modal Styles --*/
+/* The Modal (background) */
+.modal {
+   display: none;/*-- hidden by default --*/
+   position: fixed; /*-- doesn't move on the screen --*/
+   z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+   left: 0; /*-- positions at zero pixels from the left --*/
+   top: 0; /*-- positions at zero pixels from the top --*/
+   width: 100%; /*-- fills the space --*/
+   height: 100%; /*-- fills the space --*/
+   overflow: auto; /*-- handles overflow as normal. --*/
+   background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+.modal-content {
+   background-color: var(--bg);
+   color: var(--text);
+   margin: 1rem auto;
+   padding: 1em;
+   width: 92%;
+   border-radius: 4px;
+   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+@keyframes fadein {
+  from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+}
+.closes {
+   color: black;
+   font-size: 2.5em;
+   font-weight: bold;
+   position: absolute; /*-- always at the top right of the modal --*/
+   top: 5px;
+   right: 4.25%;
+   transition: all .2s ease-in;
+   text-shadow: 2px 2px 5px #FAFAFA,
+               -2px -2px 5px #FAFAFA,
+               2px -2px 5px #FAFAFA,
+               -2px 2px 5px #FAFAFA;
+}
+.closes:hover,
+.closes:focus {
+   color: var(--accent);
+   text-decoration: none;
+   cursor: pointer;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+  grid-gap: 2em;
+}
+.eg-text {
+  align-self: center;
+}
+.eg-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.modal-body img {
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+  .modal-body {grid-template-columns: 7fr 5fr;}
+
+}
+/*-- Footer Styles --*/
+footer {
+  background-color: var(--prime);
+  padding: .25rem;
+  color: var(--rev-text);
+  text-align: center;
+}
+footer a {
+  color: var(--rev-text);
+}
+footer a:hover {
+  color: var(--rev-accent);
+}
+
+
+
+
+
+
+
+/* -----------------------------------VERTICAL MEDIA CARD ----------------------------------- */
+
+
+:root {/*-- Sets color variables --*/
+  --cardBackground: rgb(75, 114, 91);
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  /*margin: 4rem 5vw;*/
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  /*height: 100%; */ 
+  border-radius: 25px;
+  overflow: hidden;
+  text-decoration: none;
+  border: grey 2px;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 1.5em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: rgb(75, 114, 91);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: rgb(75, 114, 91);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: white;
+}
+/*
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: .8em; 
+  color: #D7BDCA;  
+}*/
+
+.card__status {
+  font-size: .8em;
+  color: white;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: white; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  background-color: rgb(75, 114, 91);
+}    
+
+
+
+/*----------------------------------------------NAV MENU HORIZONTAL----------------------------------------*/
+/*------------------
+--  Nav Styles  --
+------------------*/
+/*.wrap_nav1 { /*-- main navigation element --*/
+ /* display: flex; /*-- creates a flex container --*/
+  /*flex-direction: column; /*-- direction is for MOBILE screen sizes --*/
+  /*justify-content: space-around; /*-- lays out menu items--*/
+  /*align-content: center; /*-- vertically aligns menu items to center --*/
+  /*z-index: 1000; /*-- makes navbar always sit in the front, on the z-axis--*/
+  /*width: 100%; /*-- makes navbar occupy full width of the body --*/
+/*} */
+
+a.nav-item:hover {
+  color: var(--accent);
+  cursor: pointer; /*-- changes menu items to pointer on hover --*/
+}
+
+.nav-item.trigram {
+  display: none; /*-- hides trigram (hamburger menu button) by default --*/
+  text-decoration: none; /*-- removes underline --*/
+  font-size: 2rem; /*-- makes much larger than normal text--*/
+}
+
+
+/* MY STYLES START HERE */
+.wrap_nav1 {
+  display: inline-block;
+  margin-top: -25px;
+  width: 100%;
+
+  display: flex; /*-- creates a flex container --*/
+  flex-direction: column; /*-- direction is for MOBILE screen sizes --*/
+  justify-content: space-around; /*-- lays out menu items--*/
+  z-index: 1000;
+}
+
+
+.a_nav1 {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.ul_nav1 {
+  list-style: none;
+  position: relative;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.li_nav1  {
+  float: left;
+}
+
+.ul_nav1:after {
+  clear: both;
+}
+
+.ul_nav1:before,
+.ul_nav1:after {
+    content: " ";
+    display: table;
+}
+
+.nav_nav1 {
+  position: relative;
+  background: #ff7158;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #d33317;
+}
+
+.ul_nav1.primary .li_nav1 .a_nav1 {
+  display: block;
+  padding: 20px 30px;
+  border-right: 1px solid #d8391d;
+}
+
+.ul_nav1.primary .li_nav1:last-child .a_nav1 {
+  border-right: none;
+}
+
+.ul_nav1.primary .li_nav1 .a_nav1:hover {  
+  color: #000;
+}
+
+.ul_nav1.sub {
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 0 #BEBEBE;
+  width: 35%;
+  display:none;
+}
+
+.ul_nav1.sub .li_nav1 {
+  float: none;
+  margin: 0;
+}
+
+.ul_nav1.sub .li_nav1 .a_nav1 {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  padding: 15px 30px;
+}
+
+.ul_nav1.sub .li_nav1:last-child .a_nav1 {
+  border-bottom: none;
+}
+
+.ul_nav1.sub .li_nav1 .a_nav1:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+.ul_nav1.primary .li_nav1:hover .ul_nav1 {
+  display: block;
+  background: #fff;
+}
+
+.ul_nav1.primary .li_nav1:hover .a_nav1 {
+  background: #fff;
+  color: #666;
+  text-shadow: none;
+}
+
+.ul_nav1.primary .li_nav1:hover > .a_nav1{
+  color: #000;
+} 
+
+@media only screen and (max-width: 600px) {
+  .decor { padding: 3px;}
+  .wrap { width: 100%; margin-top: 0px;}
+  li {float: none;}
+  ul.primary li:hover a {background: none; color: #8B8B8B; text-shadow: 1px 1px #000;}
+  ul.primary li:hover ul {display: block; background: #272727; color: #fff;}
+  ul.sub {display: block; position: static; box-shadow: none; width: 100%;}
+  ul.sub li a {background: #272727; border: none; color: #8B8B8B;  }
+  ul.sub li a:hover {color: #ccc; background: none;}
+}
+
+/*-- EXISTING Mobile Nav Queries --*/
+/*-- At screens BELOW 768px, hides nav menu items and displays trigram, rules for mobile nav--*/
+@media screen and (max-width: 767px) {
+  .wrap_nav1 a, .wrap_nav1 span {display: none;}
+  .wrap_nav1 a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+
+  .wrap_nav1.responsive {align-items: center;} /*-- vertically centers--*/
+  .wrap_nav1.responsive a, .wrap_nav1.responsive span {display:inherit;} /*-- makes menu items visible --*/
+  .wrap_nav1.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
+  .wrap_nav1.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
+  .wrap_nav1.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
+  .wrap_nav1.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+  .wrap_nav1.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+}
+/*-- At screens 768px and ABOVE, set normal menu defaults --*/
+@media screen and (min-width: 768px) {
+  .wrap_nav1 {display: flex; flex-direction: column; justify-content: space-between;}
 }
