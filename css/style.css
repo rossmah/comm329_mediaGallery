@@ -22,7 +22,9 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
   padding: 0 .33em;
 }
 
-
+hr {
+  color: white;
+}
 
 /*---------------------------------------- Styles for slideshow ------------------------------------------------------*/
 .slideshow {
@@ -45,7 +47,7 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
   margin-top: -22px; /*-- adjusts position by height of arrows --*/
   color: white; /*-- sets color for contrast --*/
   font-weight: bold; /*-- selects heavier font --*/
-  font-size: 18px; /*-- sets arrow font size --*/
+  font-size: 100px; /*-- sets arrow font size --*/
   transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
   border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
   -moz-user-select: none;
@@ -145,12 +147,12 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
 .main-grid-item {
   border-radius: 4px;  /*-- rounds borders --*/
   padding: .5em; /*-- adds space inside --*/
-  background-color: var(--bg);
+  background-color: rgb(75, 114, 91);;
 }
 .gallery{
   background-size: cover; /*--sets image to cover background --*/
   background-position: center center; /*-- positions image horiz. and vert. center --*/
-  border-radius: 4px 4px 0 0; 
+  border-radius: 100%; 
   width: 100%;
 }
 .thumb {
@@ -169,8 +171,11 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
 .card-title {
   margin: 1rem 0 0 0;
   text-transform: uppercase; /*--all caps text --*/
-  align-self: flex-start; /*-- positions at beginning --*/
+  /*align-self: flex-start; -- positions at beginning --*/
   color: var(--text);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 50px;
+  text-align: center;
 }
 .card-text {
   font-size: .80em;
@@ -433,7 +438,8 @@ a.nav-item:hover {
 /* MY STYLES START HERE */
 .wrap_nav1 {
   display: inline-block;
-  margin-top: -25px;
+  margin-top: -20px;
+  margin-bottom: 20px;
   width: 100%;
 
   display: flex; /*-- creates a flex container --*/
@@ -473,16 +479,16 @@ a.nav-item:hover {
 
 .nav_nav1 {
   position: relative;
-  background: #ff7158;
+  background: rgb(75, 114, 91);
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 1px #d33317;
+  text-shadow: 1px 1px 1px rgb(34, 62, 46);
 }
 
 .ul_nav1.primary .li_nav1 .a_nav1 {
   display: block;
   padding: 20px 30px;
-  border-right: 1px solid #d8391d;
+  border-right: 1px solid rgb(34, 62, 46);
 }
 
 .ul_nav1.primary .li_nav1:last-child .a_nav1 {

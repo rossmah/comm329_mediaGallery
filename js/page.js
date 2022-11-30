@@ -54,7 +54,7 @@ $(".button").on("click", function() { // when item with class of button is click
 
 
 $(".modal").on("click", function(e) { // sets up click function
-  e.preventDefault();
+  //e.preventDefault();
   var className = e.target.className; // var className set to event target
   if(className === "modal" || className === "closes"){ // if conditions are met...
     $(this).closest(".modal").hide(); // then hide the modal
