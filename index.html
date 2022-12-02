@@ -6,35 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Media Gallery</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font awesome CDN -->
-    <link rel="stylesheet" href="css/sanitize.css"><!-- cross-browser compatibility -->
-    <link rel="stylesheet" href="css/style.css"><!-- our stylesheet is loaded LAST, to override others -->
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
   </head>
 
-
-
   <body>
-    <!--<nav id="main-nav" class="topnav">
-      <a class="nav-item logo">
-        <span class="label"><i class="fas fa-home"></i>Home</span>
-      </a>
-      <a class="nav-item">
-        <span class="label"><i class="fas fa-file-upload"></i>Upload</span>
-      </a>
-      <a class="nav-item">
-        <span class="label"><i class="fas fa-info-circle"></i>Info</span>
-      </a>
-      <a class="nav-item">
-        <span class="label"><i class="fas fa-quote-left"></i>Credits</span>
-      </a>
-      <a class="nav-item more">
-        <span class="label"><i class="fas fa-ellipsis-h"></i>More</span>
-      </a>
-      <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
-    </nav>
-  -->
 <nav>
   <div class="wrap_nav1">
     <span class="decor"></span>
@@ -47,7 +27,7 @@
           <a class="a_nav1" href="">PRODUCTS</a>
           <ul class="sub ul_nav1">
             <li class="li_nav1"><a class="a_nav1" href="">PLANTS</a></li>
-            <li class="li_nav1"><a class="a_nav1" href="">PLANTERS</a></li>
+            <li class="li_nav1"><a class="a_nav1" href="">PLANTERS & POTS</a></li>
             <li class="li_nav1"><a class="a_nav1" href="">PRODUCTS</a></li>
           </ul>
         </li>
@@ -76,28 +56,24 @@
     <section class="slideshow">
       <div class="slideshow-wrapper">
         <div class="slide fade">
-          <!--<div class="numberof">1 of 4</div>-->
           <img src="https://picsum.photos/id/127/1280/448"/>
           <div class="captiontext">A lush, beautiful forest.</div>
-        </div><!-- end .slide.fade -->
+        </div>
         <div class="slide fade">
-          <div class="numberof">2 of 4</div>
           <img src="https://picsum.photos/id/380/1280/448"/>
           <div class="captiontext">Nothing better than canoeing on a lake.</div>
-        </div><!-- end .slide.fade -->
+        </div>
         <div class="slide fade">
-          <div class="numberof">3 of 4</div>
           <img src="https://picsum.photos/id/128/1280/448"/>
           <div class="captiontext">I spy a sailboat.</div>
-        </div><!-- end .slide.fade -->
+        </div>
         <div class="slide fade">
-          <div class="numberof">4 of 4</div>
           <img src="https://picsum.photos/id/217/1280/448"/>
           <div class="captiontext">This dock should probably be fixed....</div>
-        </div><!-- end .slide.fade -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;<!--unicode for less-than-sign--></a>
-        <a class="next" onclick="plusSlides(1)">&#10095;<!--unicode for greater-than-sign--></a>
-      </div><!--end slideshow-wrapper-->
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
       <br />
       <div class="text-center">
         <span class="indicator" onclick="currentSlide(1)"><img src="https://picsum.photos/id/127/1280/448"/></span>
@@ -110,125 +86,23 @@
 
 
 
-
-
-<!--
-  <div class="main-grid-item one">
-        <div class="thumb"><img class="gallery" src="./img/plant1.jpg"/></div><hr/>
-        <div class="card-content">
-          <h4 class="card-title">Tea + Devices = Fun</h4>
-          <p class="card-text">I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly or put out a battery fire.</p>
-          <button data-modal="#09" class="card-more button">View</button>
-        </div>
-      </div>
-      <div id="09" class="modal">
-  		  <div class="modal-content">
-  		    <span class="close">&times;</span>
-  				<div class="modal-body">
-            <img src="./img/plant1.jpg" alt="example" />
-  					<div class="eg-text">
-  						<h3>Tea + Devices = Fun</h3>
-  						<p>I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  					</div></div></div></div>
--->
-
-    <ul class="cards">
-      <li>
-        <!-- NORMAL VERSION OF CARD-->
-        <a href="" class="card">
-          <img src="./img/plant1.jpg" class="card__image"/>
-          <div class="card__overlay">
-            <div class="card__header">
-              <svg class="card__arc"><path/></svg>                     
-              <div class="card__header-text">
-                <h3 class="card__title">SUCCULANTS</h3>
-                <button type="button" data-modal="#01" class="card-more button">View</button><!--<span class="card__status">Learn more</span>-->
-              </div>
-            </div>
-            <p class="card__description">What a super cute and aesthetic plant, it could be yours now for ...</p>
-          </div>
-        </a>
-        <!-- MODAL VERSION OF CARD-->
-        <div id="01" class="modal">
-          <div class="modal-content">
-            <span class="closes">&times;</span>
-            <div class="modal-body">
-              <img src="./img/plant1.jpg" alt="example" />
-              <div class="eg-text">
-                <h3>PLANT 1</h3>
-                <p>What a super cute and aesthetic plant, it could be yours now for ... Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-              </div>
-            </div><!--end .modal-body-->
-          </div><!--end .modal-content-->
-        </div><!--end .modal-->
-      </li>
-      
-      <li>
-        <a href="" class="card">
-          <img src="./img/plant2.jpg" class="card__image"/>
-          <div class="card__overlay">
-            <div class="card__header">
-              <svg class="card__arc"><path/></svg>                     
-              <div class="card__header-text">
-                <h3 class="card__title">Bird</h3>
-                <span class="card__status">Learn more</span>
-              </div>
-            </div>
-            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="" class="card">
-          <img src="./img/plant3.jpg" class="card__image"/>
-          <div class="card__overlay">
-            <div class="card__header">
-              <svg class="card__arc"><path/></svg>                     
-              <div class="card__header-text">
-                <h3 class="card__title">Bird</h3>
-                <span class="card__status">Learn more</span>
-              </div>
-            </div>
-            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="" class="card">
-          <img src="./img/plant4.jpg" class="card__image"/>
-          <div class="card__overlay">
-            <div class="card__header">
-              <svg class="card__arc"><path/></svg>                     
-              <div class="card__header-text">
-                <h3 class="card__title">Bird</h3>
-                <span class="card__status">Learn more</span>
-              </div>
-            </div>
-            <p class="card__description">How cute is this bird? It looks very happy in this cherry blossom tree!</p>
-          </div>
-        </a>
-      </li>
-    </ul>
-
-
     <main class="main-grid">
       <!------------CARD ONE------------->
       <div class="main-grid-item one">
         <div class="thumb"><img class="gallery" src="./img/plant1.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Tea + Devices = Fun</h4>
-          <p class="card-text">I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly or put out a battery fire.</p>
-          <button data-modal="#09" class="card-more button">View</button>
+          <h4 class="card-title">SUCCULANTS</h4>
+          <p class="card-text">Keep it classy with our staple succulant plants.</p>
+          <button data-modal="#01" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="09" class="modal">
+      <div id="01" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="./img/plant1.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Tea + Devices = Fun</h3>
-  						<p>I always keep a cup of tea next to my expensive electronics, just in case I need to ruin them quickly . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>SUCCULANTS</h3>Keep it classy with our staple succulant plants. We offer a wide variety of species that thrive in multiple temperatures, locations, and lifestyles.</p> <h2>$15.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -239,19 +113,19 @@
       <div class="main-grid-item two">
         <div class="thumb"><img class="gallery" src="./img/plant2.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Out of Focus Book</h4>
-          <p class="card-text">Books are always best when slightly out of focus and blurred, so you don't have to actually read any of the words inside.</p>
-          <button data-modal="#24" class="card-more button">View</button>
+          <h4 class="card-title">LEAF PLANTS</h4>
+          <p class="card-text">Succulants not your speed? Check out other plants that will catch your eye.</p>
+          <button data-modal="#02" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="24" class="modal">
+      <div id="02" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="./img/plant2.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Out of Focus Book</h3>
-  						<p>Books are always best when slightly out of focus and blurred, so you don't have to actually read them . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>LEAF PLANTS</h3>
+  						<p>Succulants not your speed? We have many other plants that will catch your eye. These include flowers, shrubs, bulbs, and more.</p><h2>$7.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -261,20 +135,21 @@
       <div class="main-grid-item three">
         <div class="thumb"><img class="gallery" src="./img/plant3.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Don't Eat Cacti Fruit</h4>
-          <p class="card-text">The fruits of many common cacti are covered in spines, so don't try to eat them unless you're really, really thirsty. </p>
-          <button data-modal="#35" class="card-more button">View</button>
+          <h4 class="card-title">MATCHING SETS</h4>
+          <p class="card-text">Ranging from 2 to 20, we have the perfect sets that look great in any home. </p>
+          <button data-modal="#03" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="35" class="modal">
+      <div id="03" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="img/plant3.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Don't Eat Cacti Fruit</h3>
-  						<p>The fruits of many common cacti are covered in spines, so don't try to eat them . . .  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  					</div>
+  						<h3>MATCHING SETS</h3>
+  						<p>Ranging from 2 to 20, we have the perfect sets that look great in any home. Feel free to browse by color, style, or size of pots that are sure to compliment your plants.</p><h2>$19.99+</h2>
+
+            </div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
   		</div><!--end .modal-->
@@ -283,19 +158,19 @@
       <div class="main-grid-item four">
         <div class="thumb"><img class="gallery" src="./img/plant4.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Could Be Anywhere</h4>
-          <p class="card-text">This stormy gray coastline could be just about anywhere: Atlantic, Pacific, a Great Lake, who knows?</p>
-          <button data-modal="#44" class="card-more button">View</button>
+          <h4 class="card-title">POTS</h4>
+          <p class="card-text">Browse our array of colors, styles, and sizes for all your potting needs.</p>
+          <button data-modal="#04" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="44" class="modal">
+      <div id="04" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="img/plant4.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Could Be Anywhere</h3>
-  						<p>This stormy gray coastline could be just about anywhere: Atlantic, Pacific, a Great Lake . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>POTS</h3>
+  						<p>Browse our array of colors, styles, and sizes for all your potting needs. Coming in all shapes and sizes, every pot is handmade with love and care!</p><h2>$3.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -305,19 +180,19 @@
       <div class="main-grid-item five">
         <div class="thumb"><img class="gallery" src="./img/plant5.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Not Really this Blue</h4>
-          <p class="card-text">No sky was ever this blue, but the filter makes it seem like you are regarding an alien vista, or have eye problems.</p>
-          <button data-modal="#54" class="card-more button">View</button>
+          <h4 class="card-title">PROPAGATIONS</h4>
+          <p class="card-text">Interested in growing your own succulants? Look no further.</p>
+          <button data-modal="#05" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="54" class="modal">
+      <div id="05" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="img/plant5.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Not Really this Blue</h3>
-  						<p>No sky was ever this blue, but the filter makes it seem like you are regarding an alien vista . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>PROPAGATIONS</h3>
+  						<p>Interested in growing your own succulants? Look no further. Pick from a stock of all of our succulants, and you are on your way to raising your very own.</p><h2>$4.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -327,19 +202,19 @@
       <div class="main-grid-item six">
         <div class="thumb"><img class="gallery" src="./img/plant6.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Really Old Fence Photo</h4>
-          <p class="card-text">This photo of the fence is really old. The fence itself isn't old, it's new, but the photo is really, really old.</p>
-          <button data-modal="#59" class="card-more button">View</button>
+          <h4 class="card-title">CACTI</h4>
+          <p class="card-text">Feeling prickly? Browse our many size cacti for both indoor and outdoor spaces.</p>
+          <button data-modal="#06" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="59" class="modal">
+      <div id="06" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
-            <img src="/img/plant6.jpg" alt="example" />
+            <img src="./img/plant6.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Really Old Fence Photo</h3>
-  						<p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>CACTI</h3>
+  						<p>Feeling prickly? Browse our many size cacti for both indoor and outdoor spaces. Our sizes range from a few inches to 7 feet tall, making it easy to find a great match.</p><h2>$13.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -349,19 +224,19 @@
       <div class="main-grid-item seven">
         <div class="thumb"><img class="gallery" src="./img/plant7.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">Lawnmowing Needed</h4>
-          <p class="card-text">Regular lawnmowing needed to keep our swing clear of grass. Would be open to using goats, if it would help.</p>
-          <button data-modal="#71" class="card-more button">View</button>
+          <h4 class="card-title">STARTING KITS</h4>
+          <p class="card-text">Perfect for any beginner - Full kits of seeds, pots, soil, and more!</p>
+          <button data-modal="#07" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="71" class="modal">
+      <div id="07" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="img/plant7.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>Lawnmowing Needed</h3>
-  						<p>Regular lawnmowing needed to keep our swing clear of the grass. Would be interested in contracting goats . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>STARTING KITS</h3>
+  						<p>Perfect for any beginner - Full kits of seeds, pots, soil, and more! Mix and match each component to your liking to create the perfect custom kit for yourself or your loved ones.</p><h2>$34.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -371,19 +246,19 @@
       <div class="main-grid-item eight">
         <div class="thumb"><img class="gallery" src="./img/plant8.jpg"/></div><hr/>
         <div class="card-content">
-          <h4 class="card-title">This Sad Bench</h4>
-          <p class="card-text">There's always an open seat on this classic bench that also serves as a roost for many, many local pigeons.</p>
-          <button data-modal="#32" class="card-more button">View</button>
+          <h4 class="card-title">SOIL CARE</h4>
+          <p class="card-text">Do you care about your plants? Show them your love with custom mixtures. </p>
+          <button data-modal="#08" class="card-more button spin btn_wrap a_button">LEARN MORE</button>
         </div>
       </div><!--end .main-grid-item -->
-      <div id="32" class="modal">
+      <div id="08" class="modal">
   		  <div class="modal-content">
-  		    <span class="close">&times;</span>
+  		    <span class="closes">&times;</span>
   				<div class="modal-body">
             <img src="./img/plant8.jpg" alt="example" />
   					<div class="eg-text">
-  						<h3>This Sad Bench</h3>
-  						<p>There's always an open seat on this classic bench that also serves as a roost for local pigeons. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>SOIL CARE</h3>
+  						<p>Do you care about your plants? Show them your love with custom mixtures. Filter our options by pH levels, required water intake, or needed suppliments.</p><h2>$18.99+</h2>
   					</div>
   				</div><!--end .modal-body-->
   		  </div><!--end .modal-content-->
@@ -391,7 +266,7 @@
 
 
     </main>
-  </div> <!-- closes div on bodyContent for 90% width-->
+  </div>
     <footer>
       <p>&copy; 2022 Holly Rossmann&nbsp;|&nbsp; All photos from <a href="https://unsplash.com/">unsplash.</p>
     </footer>
