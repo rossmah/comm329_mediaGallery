@@ -36,7 +36,7 @@ function showSlides(n) {
   indicator[slideIndex-1].className += " active";
 }
 
-/* --------------------------- MODAL CODE ------------------------------- */
+/* --------------------------- MODAL CODaE ------------------------------- */
 $(".button").on("click", function() { 
   var modal = $(this).data("modal");
   $(modal).show(); 
